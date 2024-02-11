@@ -1,0 +1,59 @@
+name: CI
+
+permissions:
+  contents: write
+
+on:
+  push:
+    branches-ignore:
+      - gh-pages
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+  workflow_dispatch:
+
+env:
+  GITHUB_CONTEXT: ${{ toJson(github) }}
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: ⏬ Checkout
+        uses: actions/checkout@v4
+
+      - name: 🐍 Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: 📦 Install Dependencies
+        run: pip install -r requirements.txt
+
+      - name: 🛢️ Cache pre-commit
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pre-commit
+          key: pre-commit-${{runner.os}}-${{ hashFiles('requirements.txt') }}-${{ hashFiles('.pre-commit-config.yaml') }}
+          restore-keys:
+            pre-commit-
+
+      - name: 🚨 Lint
+        run: pre-commit run --all-files
+
+      - name: 🧪 Test
+        if: ${{ !cancelled() }}
+        run: python -m pytest --cov --cov-report=term --cov-report=html
+
+      - name: 🗑️ Remove .gitignore
+        if: ${{ !cancelled() && github.ref == 'refs/heads/main' }}
+        run: find . -type f -name .gitignore -exec rm {} \;
+
+      - name: 🚀 Deploy coverage
+        if: ${{ !cancelled() && github.ref == 'refs/heads/main' }}
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: htmlcov
