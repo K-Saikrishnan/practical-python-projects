@@ -28,3 +28,8 @@ repos:
     hooks:
       - id: mypy
         args: [--strict, --ignore-missing-imports]
+
+ci:
+  autofix_commit_msg: 🎨 [pre-commit.ci] auto-format
+  autoupdate_commit_msg: ⬆ [pre-commit.ci] auto-update
+  autoupdate_schedule: monthly
