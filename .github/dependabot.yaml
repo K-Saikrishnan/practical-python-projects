@@ -12,4 +12,4 @@ updates:
     schedule:
       interval: "monthly"
     commit-message:
-      prefix: ⬆
+      prefix: ⬆ [dependabot]

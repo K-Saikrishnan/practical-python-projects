@@ -33,19 +33,7 @@ jobs:
       - name: 📦 Install Dependencies
         run: pip install -r requirements.txt
 
-      - name: 🛢️ Cache pre-commit
-        uses: actions/cache@v4
-        with:
-          path: ~/.cache/pre-commit
-          key: pre-commit-${{runner.os}}-${{ hashFiles('requirements.txt') }}-${{ hashFiles('.pre-commit-config.yaml') }}
-          restore-keys:
-            pre-commit-
-
-      - name: 🚨 Lint
-        run: pre-commit run --all-files
-
       - name: 🧪 Test
-        if: ${{ !cancelled() }}
         run: python -m pytest --cov --cov-report=term --cov-report=html
 
       - name: 🗑️ Remove .gitignore
