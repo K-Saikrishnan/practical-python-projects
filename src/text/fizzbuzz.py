@@ -1,4 +1,6 @@
 def fizzbuzz() -> list[str]:
+  """Returns FizzBuzz values from 1 to 100."""
+
   output = []
   for i in range(1, 101):
     value = ''

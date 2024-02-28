@@ -36,3 +36,6 @@ ignore_errors = true
 exclude_also = [
   "if __name__ == .__main__.:",
 ]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["PLR2004"] # Magic value used in comparison, consider replacing {value} with a constant variable
