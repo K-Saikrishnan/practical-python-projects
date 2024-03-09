@@ -1,5 +1,6 @@
 # practical-python-projects
 
+[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/K-Saikrishnan/practical-python-projects/main.svg)](https://results.pre-commit.ci/latest/github/K-Saikrishnan/practical-python-projects/main)
 [![CI](https://github.com/K-Saikrishnan/practical-python-projects/actions/workflows/ci.yaml/badge.svg?branch=main)](https://github.com/K-Saikrishnan/practical-python-projects/actions/workflows/ci.yaml)
 [![CodeQL](https://github.com/K-Saikrishnan/practical-python-projects/actions/workflows/github-code-scanning/codeql/badge.svg?branch=main)](https://github.com/K-Saikrishnan/practical-python-projects/actions/workflows/github-code-scanning/codeql)
 [![pages-build-deployment](https://github.com/K-Saikrishnan/practical-python-projects/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/K-Saikrishnan/practical-python-projects/actions/workflows/pages/pages-build-deployment)
