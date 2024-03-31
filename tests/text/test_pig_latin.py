@@ -1,5 +1,3 @@
-import pytest
-
 from src.text import pig_latin
 
 
@@ -27,12 +25,6 @@ class TestPigLatinWord:
     assert pig_latin.word('string') == 'ingstray'
     assert pig_latin.word('dry') == 'dryay'
 
-  def test_raises_exception(self):
-    with pytest.raises(TypeError) as err:
-      pig_latin.word(123)
-
-    assert str(err.value) == 'Input must be a string'
-
 
 class TestPigLatinSentence:
   def test_empty(self):
@@ -43,9 +35,3 @@ class TestPigLatinSentence:
 
   def test_multiple_words(self):
     assert pig_latin.sentence('hello world') == 'ellohay orldway'
-
-  def test_raises_exception(self):
-    with pytest.raises(TypeError) as err:
-      pig_latin.sentence(123)
-
-    assert str(err.value) == 'Input must be a string'

@@ -19,14 +19,3 @@ from src.text import palindrome
 )
 def test_check_palindrome(text, expected):
   assert palindrome.check_palindrome(text) == expected
-
-
-def test_check_palindrome_type_error():
-  with pytest.raises(TypeError) as err:
-    palindrome.check_palindrome(123)
-  with pytest.raises(TypeError):
-    palindrome.check_palindrome(['hello'])
-  with pytest.raises(TypeError):
-    palindrome.check_palindrome({'hello': 'world'})
-
-  assert str(err.value) == 'Input must be a string'

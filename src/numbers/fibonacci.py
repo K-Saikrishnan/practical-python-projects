@@ -1,11 +1,15 @@
 import functools
 
+from src.util import check_arg
+
 MAX_COUNT = 1000
 
 
 @functools.lru_cache(maxsize=MAX_COUNT)
 def fibonacci(n: int) -> int:
   """Return the nth Fibonacci number."""
+
+  check_arg(n, int)
 
   if n < 2:  # noqa: PLR2004
     return n

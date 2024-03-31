@@ -1,6 +1,7 @@
 import random
 import string
-import typing
+
+from src.util import check_arg
 
 
 def caesar_encode(plain_text: str, key: int) -> str:
@@ -29,6 +30,9 @@ def caesar_decode(cipher_text: str, key: int) -> str:
 
 def vigenere_key_ord(key: str, length: int) -> list[int]:
   """Repeats the key and returns the key shifted ordinals."""
+
+  check_arg(key, str)
+  check_arg(length, int)
 
   key = key.lower()
   key_repeated = repeat_key(key, length)
@@ -81,11 +85,7 @@ def vernam(text: str, key: str) -> str:
 def repeat_key(key: str, length: int) -> str:
   """Repeats the key to match the length of the text."""
 
+  check_arg(key, str)
+  check_arg(length, int)
+
   return key * (length // len(key)) + key[: length % len(key)]
-
-
-def check_arg(value: typing.Any, expected_type: typing.Any) -> None:
-  """Checks if the value is of the expected type."""
-
-  if not isinstance(value, expected_type):
-    raise TypeError(f'{value} must be a {expected_type.__name__}')

@@ -1,8 +1,10 @@
+from src.util import check_arg
+
+
 def word(word: str) -> str:
   """Converts a word to Pig Latin."""
 
-  if not isinstance(word, str):
-    raise TypeError('Input must be a string')
+  check_arg(word, str)
 
   if not word:
     return ''
@@ -23,8 +25,7 @@ def word(word: str) -> str:
 def sentence(sentence: str) -> str:
   """Converts a sentence to Pig Latin."""
 
-  if not isinstance(sentence, str):
-    raise TypeError('Input must be a string')
+  check_arg(sentence, str)
 
   if not sentence:
     return ''

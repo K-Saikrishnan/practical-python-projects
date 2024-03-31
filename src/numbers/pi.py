@@ -1,9 +1,14 @@
 import decimal
 import math
 
+from src.util import check_arg
+
 
 def binary_split(a: int, b: int) -> tuple[int, int, int]:
   """Binary split algorithm used in Chudnovsky algorithm to compute pi."""
+
+  check_arg(a, int)
+  check_arg(b, int)
 
   if b == a + 1:
     Pab = -(6 * a - 5) * (2 * a - 1) * (6 * a - 1)
@@ -22,6 +27,9 @@ def binary_split(a: int, b: int) -> tuple[int, int, int]:
 
 def chudnovsky(digits: int) -> decimal.Decimal:
   """Compute pi upto nth digit using Chudnovsky algorithm."""
+
+  check_arg(digits, int)
+
   decimal.getcontext().prec = digits + 2  # Add extra precision to avoid rounding errors
 
   _, Q1n, R1n = binary_split(1, digits)
@@ -31,6 +39,8 @@ def chudnovsky(digits: int) -> decimal.Decimal:
 
 def pi(digits: int = 15) -> decimal.Decimal:
   """Compute pi upto 1000 digits. Calculates the 1st 15 digits using math.pi builtin.  For >16 digits, uses the Chudnovsky algorithm."""
+
+  check_arg(digits, int)
 
   BUILTIN_PI_DIGITS = 15
 

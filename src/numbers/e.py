@@ -1,6 +1,8 @@
 import decimal
 import functools
 
+from src.util import check_arg
+
 
 @functools.lru_cache(maxsize=None)
 def get_e_pre_computed() -> decimal.Decimal:
@@ -20,6 +22,9 @@ def get_e_pre_computed() -> decimal.Decimal:
 @functools.lru_cache(maxsize=None)
 def e(digits: int) -> str:
   """Return e upto nth digit using precomputed value."""
+
+  check_arg(digits, int)
+
   e_value = get_e_pre_computed()
 
   digits = abs(digits)
