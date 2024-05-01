@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Coverage report</title>
     <link rel="icon" sizes="32x32" href="favicon_32.png">
     <link rel="stylesheet" href="style.css" type="text/css">
-    <script type="text/javascript" src="coverage_html.js" defer></script>
+    <script src="coverage_html.js" defer></script>
 </head>
 <body class="indexfile">
 <header>
@@ -16,13 +16,13 @@
         <aside id="help_panel_wrapper">
             <input id="help_panel_state" type="checkbox">
             <label for="help_panel_state">
-                <img id="keyboard_icon" src="keybd_closed.png" alt="Show/hide keyboard shortcuts" />
+                <img id="keyboard_icon" src="keybd_closed.png" alt="Show/hide keyboard shortcuts">
             </label>
             <div id="help_panel">
                 <p class="legend">Shortcuts on this page</p>
                 <div class="keyhelp">
                     <p>
-                        <kbd>n</kbd>
+                        <kbd>f</kbd>
                         <kbd>s</kbd>
                         <kbd>m</kbd>
                         <kbd>x</kbd>
@@ -41,11 +41,20 @@
             </div>
         </aside>
         <form id="filter_container">
-            <input id="filter" type="text" value="" placeholder="filter..." />
+            <input id="filter" type="text" value="" placeholder="filter...">
+            <div>
+                <input id="hide100" type="checkbox" >
+                <label for="hide100">hide covered</label>
+            </div>
         </form>
+        <h2>
+                <a class="button current">Files</a>
+                <a class="button" href="function_index.html">Functions</a>
+                <a class="button" href="class_index.html">Classes</a>
+        </h2>
         <p class="text">
-            <a class="nav" href="https://coverage.readthedocs.io/en/7.4.4">coverage.py v7.4.4</a>,
-            created at 2024-04-06 06:00 +0000
+            <a class="nav" href="https://coverage.readthedocs.io/en/7.5.0">coverage.py v7.5.0</a>,
+            created at 2024-05-01 08:01 +0000
         </p>
     </div>
 </header>
@@ -53,191 +62,191 @@
     <table class="index" data-sortable>
         <thead>
             <tr class="tablehead" title="Click to sort">
-                <th class="name left" aria-sort="none" data-shortcut="n">Module</th>
-                <th aria-sort="none" data-default-sort-order="descending" data-shortcut="s">statements</th>
-                <th aria-sort="none" data-default-sort-order="descending" data-shortcut="m">missing</th>
-                <th aria-sort="none" data-default-sort-order="descending" data-shortcut="x">excluded</th>
-                <th class="right" aria-sort="none" data-shortcut="c">coverage</th>
+                <th class="name left" aria-sort="none" data-shortcut="f">File<span class="arrows"></span></th>
+                <th aria-sort="none" data-default-sort-order="descending" data-shortcut="s">statements<span class="arrows"></span></th>
+                <th aria-sort="none" data-default-sort-order="descending" data-shortcut="m">missing<span class="arrows"></span></th>
+                <th aria-sort="none" data-default-sort-order="descending" data-shortcut="x">excluded<span class="arrows"></span></th>
+                <th class="right" aria-sort="none" data-shortcut="c">coverage<span class="arrows"></span></th>
             </tr>
         </thead>
         <tbody>
-            <tr class="file">
-                <td class="name left"><a href="d_145eef247bfb46b6___init___py.html">src/__init__.py</a></td>
+            <tr class="region">
+                <td class="name left"><a href="z_145eef247bfb46b6___init___py.html">src/__init__.py</a></td>
                 <td>0</td>
                 <td>0</td>
                 <td>0</td>
                 <td class="right" data-ratio="0 0">100%</td>
             </tr>
-            <tr class="file">
-                <td class="name left"><a href="d_c7919e728c3a92e8_complex_py.html">src/numbers/complex.py</a></td>
+            <tr class="region">
+                <td class="name left"><a href="z_c7919e728c3a92e8_complex_py.html">src/numbers/complex.py</a></td>
                 <td>10</td>
                 <td>0</td>
                 <td>0</td>
                 <td class="right" data-ratio="10 10">100%</td>
             </tr>
-            <tr class="file">
-                <td class="name left"><a href="d_c7919e728c3a92e8_e_py.html">src/numbers/e.py</a></td>
+            <tr class="region">
+                <td class="name left"><a href="z_c7919e728c3a92e8_e_py.html">src/numbers/e.py</a></td>
                 <td>34</td>
                 <td>0</td>
                 <td>2</td>
                 <td class="right" data-ratio="34 34">100%</td>
             </tr>
-            <tr class="file">
-                <td class="name left"><a href="d_c7919e728c3a92e8_fibonacci_py.html">src/numbers/fibonacci.py</a></td>
+            <tr class="region">
+                <td class="name left"><a href="z_c7919e728c3a92e8_fibonacci_py.html">src/numbers/fibonacci.py</a></td>
                 <td>22</td>
                 <td>0</td>
                 <td>2</td>
                 <td class="right" data-ratio="22 22">100%</td>
             </tr>
-            <tr class="file">
-                <td class="name left"><a href="d_c7919e728c3a92e8_pi_py.html">src/numbers/pi.py</a></td>
+            <tr class="region">
+                <td class="name left"><a href="z_c7919e728c3a92e8_pi_py.html">src/numbers/pi.py</a></td>
                 <td>42</td>
                 <td>0</td>
                 <td>2</td>
                 <td class="right" data-ratio="42 42">100%</td>
             </tr>
-            <tr class="file">
-                <td class="name left"><a href="d_800a38c392383b9f_ciphers_py.html">src/text/ciphers.py</a></td>
+            <tr class="region">
+                <td class="name left"><a href="z_800a38c392383b9f_ciphers_py.html">src/text/ciphers.py</a></td>
                 <td>47</td>
                 <td>0</td>
                 <td>0</td>
                 <td class="right" data-ratio="47 47">100%</td>
             </tr>
-            <tr class="file">
-                <td class="name left"><a href="d_800a38c392383b9f_fizzbuzz_py.html">src/text/fizzbuzz.py</a></td>
+            <tr class="region">
+                <td class="name left"><a href="z_800a38c392383b9f_fizzbuzz_py.html">src/text/fizzbuzz.py</a></td>
                 <td>12</td>
                 <td>0</td>
                 <td>2</td>
                 <td class="right" data-ratio="12 12">100%</td>
             </tr>
-            <tr class="file">
-                <td class="name left"><a href="d_800a38c392383b9f_palindrome_py.html">src/text/palindrome.py</a></td>
+            <tr class="region">
+                <td class="name left"><a href="z_800a38c392383b9f_palindrome_py.html">src/text/palindrome.py</a></td>
                 <td>4</td>
                 <td>0</td>
                 <td>0</td>
                 <td class="right" data-ratio="4 4">100%</td>
             </tr>
-            <tr class="file">
-                <td class="name left"><a href="d_800a38c392383b9f_pig_latin_py.html">src/text/pig_latin.py</a></td>
+            <tr class="region">
+                <td class="name left"><a href="z_800a38c392383b9f_pig_latin_py.html">src/text/pig_latin.py</a></td>
                 <td>18</td>
                 <td>0</td>
                 <td>0</td>
                 <td class="right" data-ratio="18 18">100%</td>
             </tr>
-            <tr class="file">
-                <td class="name left"><a href="d_800a38c392383b9f_reverse_string_py.html">src/text/reverse_string.py</a></td>
+            <tr class="region">
+                <td class="name left"><a href="z_800a38c392383b9f_reverse_string_py.html">src/text/reverse_string.py</a></td>
                 <td>4</td>
                 <td>0</td>
                 <td>0</td>
                 <td class="right" data-ratio="4 4">100%</td>
             </tr>
-            <tr class="file">
-                <td class="name left"><a href="d_800a38c392383b9f_vowels_py.html">src/text/vowels.py</a></td>
+            <tr class="region">
+                <td class="name left"><a href="z_800a38c392383b9f_vowels_py.html">src/text/vowels.py</a></td>
                 <td>9</td>
                 <td>0</td>
                 <td>9</td>
                 <td class="right" data-ratio="9 9">100%</td>
             </tr>
-            <tr class="file">
-                <td class="name left"><a href="d_800a38c392383b9f_word_count_py.html">src/text/word_count.py</a></td>
+            <tr class="region">
+                <td class="name left"><a href="z_800a38c392383b9f_word_count_py.html">src/text/word_count.py</a></td>
                 <td>8</td>
                 <td>0</td>
                 <td>0</td>
                 <td class="right" data-ratio="8 8">100%</td>
             </tr>
-            <tr class="file">
-                <td class="name left"><a href="d_145eef247bfb46b6_util_py.html">src/util.py</a></td>
+            <tr class="region">
+                <td class="name left"><a href="z_145eef247bfb46b6_util_py.html">src/util.py</a></td>
                 <td>4</td>
                 <td>0</td>
                 <td>0</td>
                 <td class="right" data-ratio="4 4">100%</td>
             </tr>
-            <tr class="file">
-                <td class="name left"><a href="d_a44f0ac069e85531___init___py.html">tests/__init__.py</a></td>
+            <tr class="region">
+                <td class="name left"><a href="z_a44f0ac069e85531___init___py.html">tests/__init__.py</a></td>
                 <td>0</td>
                 <td>0</td>
                 <td>0</td>
                 <td class="right" data-ratio="0 0">100%</td>
             </tr>
-            <tr class="file">
-                <td class="name left"><a href="d_d30623834a2fc32f_test_complex_py.html">tests/numbers/test_complex.py</a></td>
+            <tr class="region">
+                <td class="name left"><a href="z_d30623834a2fc32f_test_complex_py.html">tests/numbers/test_complex.py</a></td>
                 <td>23</td>
                 <td>0</td>
                 <td>0</td>
                 <td class="right" data-ratio="23 23">100%</td>
             </tr>
-            <tr class="file">
-                <td class="name left"><a href="d_d30623834a2fc32f_test_e_py.html">tests/numbers/test_e.py</a></td>
+            <tr class="region">
+                <td class="name left"><a href="z_d30623834a2fc32f_test_e_py.html">tests/numbers/test_e.py</a></td>
                 <td>35</td>
                 <td>0</td>
                 <td>0</td>
                 <td class="right" data-ratio="35 35">100%</td>
             </tr>
-            <tr class="file">
-                <td class="name left"><a href="d_d30623834a2fc32f_test_fibonacci_py.html">tests/numbers/test_fibonacci.py</a></td>
+            <tr class="region">
+                <td class="name left"><a href="z_d30623834a2fc32f_test_fibonacci_py.html">tests/numbers/test_fibonacci.py</a></td>
                 <td>23</td>
                 <td>0</td>
                 <td>0</td>
                 <td class="right" data-ratio="23 23">100%</td>
             </tr>
-            <tr class="file">
-                <td class="name left"><a href="d_d30623834a2fc32f_test_pi_py.html">tests/numbers/test_pi.py</a></td>
+            <tr class="region">
+                <td class="name left"><a href="z_d30623834a2fc32f_test_pi_py.html">tests/numbers/test_pi.py</a></td>
                 <td>45</td>
                 <td>0</td>
                 <td>0</td>
                 <td class="right" data-ratio="45 45">100%</td>
             </tr>
-            <tr class="file">
-                <td class="name left"><a href="d_d30623834a2fc32f_test_reverse_string_py.html">tests/numbers/test_reverse_string.py</a></td>
+            <tr class="region">
+                <td class="name left"><a href="z_d30623834a2fc32f_test_reverse_string_py.html">tests/numbers/test_reverse_string.py</a></td>
                 <td>9</td>
                 <td>0</td>
                 <td>0</td>
                 <td class="right" data-ratio="9 9">100%</td>
             </tr>
-            <tr class="file">
-                <td class="name left"><a href="d_a44f0ac069e85531_test_util_py.html">tests/test_util.py</a></td>
+            <tr class="region">
+                <td class="name left"><a href="z_a44f0ac069e85531_test_util_py.html">tests/test_util.py</a></td>
                 <td>10</td>
                 <td>0</td>
                 <td>0</td>
                 <td class="right" data-ratio="10 10">100%</td>
             </tr>
-            <tr class="file">
-                <td class="name left"><a href="d_ead4d906a3bfa7a4_test_ciphers_py.html">tests/text/test_ciphers.py</a></td>
+            <tr class="region">
+                <td class="name left"><a href="z_ead4d906a3bfa7a4_test_ciphers_py.html">tests/text/test_ciphers.py</a></td>
                 <td>61</td>
                 <td>0</td>
                 <td>0</td>
                 <td class="right" data-ratio="61 61">100%</td>
             </tr>
-            <tr class="file">
-                <td class="name left"><a href="d_ead4d906a3bfa7a4_test_fizzbuzz_py.html">tests/text/test_fizzbuzz.py</a></td>
+            <tr class="region">
+                <td class="name left"><a href="z_ead4d906a3bfa7a4_test_fizzbuzz_py.html">tests/text/test_fizzbuzz.py</a></td>
                 <td>3</td>
                 <td>0</td>
                 <td>0</td>
                 <td class="right" data-ratio="3 3">100%</td>
             </tr>
-            <tr class="file">
-                <td class="name left"><a href="d_ead4d906a3bfa7a4_test_palindrome_py.html">tests/text/test_palindrome.py</a></td>
+            <tr class="region">
+                <td class="name left"><a href="z_ead4d906a3bfa7a4_test_palindrome_py.html">tests/text/test_palindrome.py</a></td>
                 <td>5</td>
                 <td>0</td>
                 <td>0</td>
                 <td class="right" data-ratio="5 5">100%</td>
             </tr>
-            <tr class="file">
-                <td class="name left"><a href="d_ead4d906a3bfa7a4_test_pig_latin_py.html">tests/text/test_pig_latin.py</a></td>
+            <tr class="region">
+                <td class="name left"><a href="z_ead4d906a3bfa7a4_test_pig_latin_py.html">tests/text/test_pig_latin.py</a></td>
                 <td>27</td>
                 <td>0</td>
                 <td>0</td>
                 <td class="right" data-ratio="27 27">100%</td>
             </tr>
-            <tr class="file">
-                <td class="name left"><a href="d_ead4d906a3bfa7a4_test_vowels_py.html">tests/text/test_vowels.py</a></td>
+            <tr class="region">
+                <td class="name left"><a href="z_ead4d906a3bfa7a4_test_vowels_py.html">tests/text/test_vowels.py</a></td>
                 <td>12</td>
                 <td>0</td>
                 <td>0</td>
                 <td class="right" data-ratio="12 12">100%</td>
             </tr>
-            <tr class="file">
-                <td class="name left"><a href="d_ead4d906a3bfa7a4_test_word_count_py.html">tests/text/test_word_count.py</a></td>
+            <tr class="region">
+                <td class="name left"><a href="z_ead4d906a3bfa7a4_test_word_count_py.html">tests/text/test_word_count.py</a></td>
                 <td>11</td>
                 <td>0</td>
                 <td>0</td>
@@ -261,16 +270,16 @@
 <footer>
     <div class="content">
         <p>
-            <a class="nav" href="https://coverage.readthedocs.io/en/7.4.4">coverage.py v7.4.4</a>,
-            created at 2024-04-06 06:00 +0000
+            <a class="nav" href="https://coverage.readthedocs.io/en/7.5.0">coverage.py v7.5.0</a>,
+            created at 2024-05-01 08:01 +0000
         </p>
     </div>
     <aside class="hidden">
-        <a id="prevFileLink" class="nav" href="d_ead4d906a3bfa7a4_test_word_count_py.html"/>
-        <a id="nextFileLink" class="nav" href="d_145eef247bfb46b6___init___py.html"/>
-        <button type="button" class="button_prev_file" data-shortcut="["/>
-        <button type="button" class="button_next_file" data-shortcut="]"/>
-        <button type="button" class="button_show_hide_help" data-shortcut="?"/>
+        <a id="prevFileLink" class="nav" href="z_ead4d906a3bfa7a4_test_word_count_py.html"></a>
+        <a id="nextFileLink" class="nav" href="z_145eef247bfb46b6___init___py.html"></a>
+        <button type="button" class="button_prev_file" data-shortcut="["></button>
+        <button type="button" class="button_next_file" data-shortcut="]"></button>
+        <button type="button" class="button_show_hide_help" data-shortcut="?"></button>
     </aside>
 </footer>
 </body>
