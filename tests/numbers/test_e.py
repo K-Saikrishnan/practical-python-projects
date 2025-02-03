@@ -37,7 +37,7 @@ class TestMain:
     mocker.patch('builtins.input', side_effect=['10', 'q'])
     e.main()
     out, err = capfd.readouterr()
-    assert out == f'{e_1000_digits[: 11]}\n'
+    assert out == f'{e_1000_digits[:11]}\n'
     assert err == ''
 
   @pytest.mark.parametrize('inp', ['-10', '0', '1001'])
