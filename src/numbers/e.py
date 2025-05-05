@@ -4,7 +4,7 @@ import functools
 from src.util import check_arg
 
 
-@functools.lru_cache(maxsize=None)
+@functools.cache
 def get_e_pre_computed() -> decimal.Decimal:
   """Compute e with 3000 digit precision using Taylor series."""
   PRECISION = 3000
@@ -19,7 +19,7 @@ def get_e_pre_computed() -> decimal.Decimal:
   return e_value
 
 
-@functools.lru_cache(maxsize=None)
+@functools.cache
 def e(digits: int) -> str:
   """Return e upto nth digit using precomputed value."""
 
